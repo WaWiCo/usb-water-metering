@@ -3,7 +3,7 @@ Python-based codes that read audio from the WaWiCo USB adapter to determine whet
 
 #
 ### - Real-Time Frequency Visualization -
-The following 
+The following script runs a real-time visualization to help identify the frequency response of the MEMS microphone placed in proximity to the piping system:
 > wawico_realtime.py
 
 #
