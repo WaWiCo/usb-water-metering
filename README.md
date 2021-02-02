@@ -1,8 +1,12 @@
 # USB Water Metering 
 Python-based codes that read audio from the WaWiCo USB adapter to determine whether water is flowing through a household pipe
-#
-### Real-Time 
-Maker version for further devepoment
+
+---
+### Real-Time Frequency Visualization
+
+---
+### Water Flow Detection
+
 The signal amplitude coming from the microphone and the frequency bands are the
 2 variable to which the paramter need to be adapted.  Especially the amplitude
 differes in a wide range so an all PEX pipe system may create a very weak signal
