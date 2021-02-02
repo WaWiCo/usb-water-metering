@@ -1,7 +1,7 @@
 ##############################################
-# ADMP401 + USB Sound Card Reader
+# Frequency Response of USB Sound Card Reader
 #
-# -- by Josh Hrisko, Maker Portal LLC
+# -- by WaWiCo 
 # 
 ##############################################
 #
@@ -29,8 +29,23 @@ def fft_calc(data_vec):
 # function for setting up pyserial
 ##############################################
 #
-def pyserial_start():
+def soundcard_finder():
+    ###############################
+    # ---- look for USB sound card 
     audio = pyaudio.PyAudio() # create pyaudio instantiation
+    for dev_ii in range(audio.get_device_count()): # loop through devices
+        dev = audio.get_device_info_by_index(dev_ii)
+        if len(dev['name'].split('USB'))>1: # look for USB device
+            dev_indx = dev['index'] # device index
+            dev_name = dev['name'] # device name
+            dev_chans = dev['maxInputChannels'] # input channels
+            dev_samprate = dev['defaultSampleRate'] # sample rate
+            print('PyAudio Device Info - Index: {0}, '.format(dev_indx)+\
+                  'Name: {0}, Channels: {1:2.0f}, '.format(dev_name,dev_chans)+\
+                      'Sample Rate {0:2.0f}'.format(samp_rate))
+    return audio,dev_indx,dev_chans # return pyaudio, USB dev index, channels
+#
+def pyserial_start():
     ##############################
     ### create pyaudio stream  ###
     # -- streaming can be broken down as follows:
@@ -42,10 +57,10 @@ def pyserial_start():
     # -- -- frmaes_per_buffer  = chunk to grab and keep in buffer before reading
     ##############################
     stream = audio.open(format = pyaudio_format,rate = samp_rate,channels = chans, \
-                        input_device_index = dev_index,input = True, \
+                        input_device_index = dev_indx,input = True, \
                         frames_per_buffer=CHUNK)
     stream.stop_stream() # stop stream to prevent overload
-    return stream,audio
+    return stream
 
 def pyserial_end():
     stream.close() # close the stream
@@ -149,14 +164,18 @@ if __name__=="__main__":
     samp_rate      = 44100 # sample rate [Hz]
     pyaudio_format = pyaudio.paInt16 # 16-bit device
     buffer_format  = np.int16 # 16-bit for buffer
-    chans          = 1 # only read 1 channel
-    dev_index      = 1 # index of sound device    
+    #
+    #############################
+    # Find and Start Soundcard 
+    #############################
+    #
+    audio,dev_indx,chans = soundcard_finder() # start pyaudio,get indx,channels
     #
     #############################
     # stream info and data saver
     #############################
     #
-    stream,audio = pyserial_start() # start the pyaudio stream
+    stream = pyserial_start() # start the pyaudio stream
     record_length =  float(CHUNK)/float(samp_rate) # seconds to record
     plot_bool = 0 # boolean for first plot
     #
