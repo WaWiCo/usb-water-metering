@@ -2,11 +2,12 @@
 Python-based codes that read audio from the WaWiCo USB adapter to determine whether water is flowing through a household pipe
 
 #
-### Real-Time Frequency Visualization
-> Test
+### - Real-Time Frequency Visualization -
+The following 
+> wawico_realtime.py
 
 #
-### Water Flow Detection
+### - Water Flow Detection -
 
 The signal amplitude coming from the microphone and the frequency bands are the
 2 variable to which the paramter need to be adapted.  Especially the amplitude
