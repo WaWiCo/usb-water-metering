@@ -8,6 +8,8 @@ The following script runs a real-time visualization to help identify the frequen
 
 #
 ### - Water Flow Detection -
+The following code is meant to identify water flow based on the frequencies produced during flow through the piping: 
+> water_metering.py
 
 The signal amplitude coming from the microphone and the frequency bands are the
 2 variable to which the paramter need to be adapted.  Especially the amplitude
