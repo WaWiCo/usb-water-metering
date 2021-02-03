@@ -6,8 +6,8 @@ Python-based codes that read audio from the WaWiCo USB adapter to determine whet
 The set of Python codes presented in this repository require 'pyaudio' as a library, which can be quite an involved install depending on the system (Mac, Linux, Windows). To install pyaudio, follow the procedures outlined below for your OS:
 
 - Raspberry Pi (Linux)
-- In the terminal install the following:
--- sudo apt-get install libportaudio0
+   In the terminal install the following:
+   sudo apt-get install libportaudio0
 #
 ### - Real-Time Frequency Visualization -
 The following script runs a real-time visualization to help identify the frequency response of the MEMS microphone placed in proximity to the piping system:
