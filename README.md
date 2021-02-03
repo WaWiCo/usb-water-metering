@@ -29,11 +29,11 @@ In the install window, make sure ‘C++ build tools’ is checked before clickin
 
 Once the install completes, download the pyaudio wheel from the following site for the respective Python 3.x version:
 
-https://www.lfd.uci.edu/~gohlke/pythonlibs/
+- https://www.lfd.uci.edu/~gohlke/pythonlibs/
 
 Once the .whl file is downloaded to the Downloads folder, navigate to that folder in a terminal and type the following:
 
-$ python3 -m pip install PyAudio-0.2.11-cp38-cp38-win_amd64.whl
+    python3 -m pip install PyAudio-0.2.11-cp38-cp38-win_amd64.whl
 
 NOTE: the file above (PyAudio-0.2.11-cp38-cp38-win_amd64.whl) should be substituted for your Python version (cp38 = Python3.8) and OS version (win_amd64 = Windows 64-bit).
 
