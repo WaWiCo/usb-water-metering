@@ -20,6 +20,9 @@ Finally, the pyaudio installs:
 
     brew install portaudio
     pip3 install pyaudio
+    
+##### Windows 10
+For Windows, things get a bit more complicated with pyaudio. 
 #
 ### - Real-Time Frequency Visualization -
 The following script runs a real-time visualization to help identify the frequency response of the MEMS microphone placed in proximity to the piping system:
