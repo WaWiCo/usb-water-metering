@@ -22,7 +22,21 @@ Finally, the pyaudio installs:
     pip3 install pyaudio
     
 ##### Windows 10
-For Windows, things get a bit more complicated with pyaudio. 
+For Windows, things get a bit more complicated with pyaudio. Download Microsoft C++ Build Tools and run the .exe (if they are not already on the system):
+- https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+In the install window, make sure ‘C++ build tools’ is checked before clicking ‘Install’ - this is quite a large install (~6.5GB), but is the simplest method.
+
+Once the install completes, download the pyaudio wheel from the following site for the respective Python 3.x version:
+
+https://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+Once the .whl file is downloaded to the Downloads folder, navigate to that folder in a terminal and type the following:
+
+$ python3 -m pip install PyAudio-0.2.11-cp38-cp38-win_amd64.whl
+
+NOTE: the file above (PyAudio-0.2.11-cp38-cp38-win_amd64.whl) should be substituted for your Python version (cp38 = Python3.8) and OS version (win_amd64 = Windows 64-bit).
+
 #
 ### - Real-Time Frequency Visualization -
 The following script runs a real-time visualization to help identify the frequency response of the MEMS microphone placed in proximity to the piping system:
