@@ -1,7 +1,7 @@
 ##############################################
-# Frequency Response of USB Sound Card Reader
+# Frequency Response of WaWiCo USB Sound Card 
 #
-# -- by WaWiCo 
+# -- by WaWiCo 2021
 # 
 ##############################################
 #
@@ -10,7 +10,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import numpy as np
-import time,wave,datetime,os,csv
+import time,wave,datetime,os,csv,sys
 
 ##############################################
 # function for FFT
@@ -29,7 +29,7 @@ def fft_calc(data_vec):
 # function for setting up pyserial
 ##############################################
 #
-def soundcard_finder():
+def soundcard_finder(dev_indx=None,dev_name=None,dev_chans=1,dev_samprate=44100):
     ###############################
     # ---- look for USB sound card 
     audio = pyaudio.PyAudio() # create pyaudio instantiation
@@ -43,6 +43,9 @@ def soundcard_finder():
             print('PyAudio Device Info - Index: {0}, '.format(dev_indx)+\
                   'Name: {0}, Channels: {1:2.0f}, '.format(dev_name,dev_chans)+\
                       'Sample Rate {0:2.0f}'.format(samp_rate))
+    if dev_name==None:
+        print("No WaWico USB Device Found")
+        return None,None,None
     return audio,dev_indx,dev_chans # return pyaudio, USB dev index, channels
 #
 def pyserial_start():
@@ -170,6 +173,8 @@ if __name__=="__main__":
     #############################
     #
     audio,dev_indx,chans = soundcard_finder() # start pyaudio,get indx,channels
+    if audio == None:
+        sys.exit() # exit if no WaWiCo sound card is found
     #
     #############################
     # stream info and data saver
@@ -196,5 +201,8 @@ if __name__=="__main__":
                 fig,ax,ax_bgnd,line1 = plotter() # first plot allocating params
                 plot_bool = 1 # lets the loop know the first plot started
         except:
+            fig.savefig("wawico_realtime_demo.png",dpi=300,
+                        bbox_inches='tight',facecolor='#FCFCFC')
             continue
+        
     pyserial_end() # close the stream/pyaudio connection
