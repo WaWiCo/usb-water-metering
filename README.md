@@ -2,10 +2,10 @@
 Python-based codes that read audio from the WaWiCo USB adapter to determine whether water is flowing through a household pipe
 
 ### JUMP TO:
-<a href="#start">Operating System Installs</a><br>
-<a href="#realtime">Real-Time Frequency Visualization</a><br>
-<a href="#flow">Water Flow Detection</a><br>
-<a href="#event">Event Detection and Documentation</a><br>
+<a href="#start">- Operating System Installs</a><br>
+<a href="#realtime">- Real-Time Frequency Visualization</a><br>
+<a href="#flow">- Water Flow Detection</a><br>
+<a href="#event">- Event Detection and Documentation</a><br>
 
 <a id="start"></a>
 #
