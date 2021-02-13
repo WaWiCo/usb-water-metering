@@ -173,27 +173,27 @@ with commata between them.
 
 """
 List of modules and functions
-# Initialisation: Global var and arrays, Parameter settings, Files, etc.
-	 Initialize some global vars
-# Notification Module
-	 def notify(wf):
-# Detect ongoing Water-Flow  (Open valve or Leak detection)
-     def fwf(wfc):               # Detect ongoing water-flow
-# Create  Flow Periods
-	 def fp_1(ID, ts, power):    # Flow Period creation main
-	 def fp_2():                 # Flow Period assembling of records
-# Diverse function
-	def check_time():           # Detect some points in Time, New Day, new hour etc
-	def ctrl_C(signal, frame):  # terminate program with CTRL_C key
-	def fR(str0,  CW):          # format data  to the right by colum size
-	def fR_dt(dt):              # format dt to sec or min
-# Development and Test function
-	def dev_and_test():         # create/display individual Frequency Bins
-# File handling globals and function
-	def all_log(txt):           # write all events to PT_Log.dat
-	def wf_log(txt):            # Writes only water-flow events to PT_WF.dat
-    def fp_log(txt):            # Writes Flow Periods
-# Goertzel DFT/FFT  module
-    def goertzel(samples, sample_rate, *freqs):
-# Main Modul
-"""
+Initialisation: Global var and arrays, Parameter settings, Files, etc.
+	 - Initialize some global vars
+Notification Module
+	- def notify(wf):
+Detect ongoing Water-Flow  (Open valve or Leak detection)
+     	- def fwf(wfc):               # Detect ongoing water-flow
+Create  Flow Periods
+	- def fp_1(ID, ts, power):    # Flow Period creation main
+	- def fp_2():                 # Flow Period assembling of records
+Diverse function
+	- def check_time():           # Detect some points in Time, New Day, new hour etc
+	- def ctrl_C(signal, frame):  # terminate program with CTRL_C key
+	- def fR(str0,  CW):          # format data  to the right by colum size
+	- def fR_dt(dt):              # format dt to sec or min
+Development and Test function
+	- def dev_and_test():         # create/display individual Frequency Bins
+File handling globals and function
+	- def all_log(txt):           # write all events to PT_Log.dat
+	- def wf_log(txt):            # Writes only water-flow events to PT_WF.dat
+    	- def fp_log(txt):            # Writes Flow Periods
+Goertzel DFT/FFT  module
+    	- def goertzel(samples, sample_rate, *freqs):
+Main Modul
+
