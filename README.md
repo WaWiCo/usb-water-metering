@@ -138,45 +138,38 @@ Sat Jan 23 00:00:00 2021
 #
 ### - Event Detection and Documentation -
 
-################################################################################
-# WFD3.py  - Detect and document Water-Flow in a home water-pipe system.
-# by gramax, WaWiCo
-# Januar 2nd 2021
-# Stand: Febr. 7th 2021
-#-------------------------------------------------------------------------------
-# Should work on any computer with a  Win 10, Mac OS 10.x or Linux OS
-# Python 3.x  and the libraries pyaudio and numpy
-# For testing it also works with a  build in microphone.
-# For getting real data it needs the USB soundcard/Microphone combination
-# ------------------------------------------------------------------------------
-# Start: Python WFD3.py    Runs for ever End: "CTRL C".
-# "Ctrl Z" ends Python and may result in loss of some data not yet stored in file
-# The program creates following 3 files that can be opened/look at with any editor.
-# "WWC_ALL.dat"  contains all recoed Water-Flow or  not
-# ID TS          avg FB1    FB2  max FB1    FB2
-# P3 1612734296       0       1       2       3
-# P3 1612734297       2       4       9       9
-# P3 1612734298    2170    3356    6165   12507
-# P3 1612734299    2526    3168    4242    6465
+Should work on any computer with a  Win 10, Mac OS 10.x or Linux OS
+Python 3.x  and the libraries pyaudio and numpy
+For testing it also works with a  build in microphone.
+For getting real data it needs the USB soundcard/Microphone combination
 
-# "WWC_WF.dat" contains only Water-Flow   Records
-# Structure 100% identical with WWC_ALL.dat
-# P3 1612734298    2170    3356    6165   12507
-# P3 1612734299    2526    3168    4242    6465
-# Both WWC_ALL.dat and WWC_WF.dat are planned as basis for an unlimited amount
-# of further analysyis and statistics/graphics etc.  WWC_ALL.dat can alo be used
-# for a gapless documentation of water usage over many years.
+Start: Python WFD3.py    Runs for ever End: "CTRL C".
+"Ctrl Z" ends Python and may result in loss of some data not yet stored in file
+The program creates following 3 files that can be opened/look at with any editor.
+"WWC_ALL.dat"  contains all recoed Water-Flow or  not
+ID TS          avg FB1    FB2  max FB1    FB2
+P3 1612734296       0       1       2       3
+P3 1612734297       2       4       9       9
+P3 1612734298    2170    3356    6165   12507
+P3 1612734299    2526    3168    4242    6465
 
-# "WWC_FP.dat"   contains  Flow Periods (= Cumulation of WF Records)
-# ID start at   end at    Duration
-# P3 13:45:00 - 13:45:07   7.0 sec
-# P3 14:23:52 - 14:24:19  27.0 sec
+"WWC_WF.dat" contains only Water-Flow   Records
+Structure 100% identical with WWC_ALL.dat
+P3 1612734298    2170    3356    6165   12507
+P3 1612734299    2526    3168    4242    6465
+Both WWC_ALL.dat and WWC_WF.dat are planned as basis for an unlimited amount
+of further analysyis and statistics/graphics etc.  WWC_ALL.dat can alo be used
+for a gapless documentation of water usage over many years.
 
-# Reducing the size of WWC_ALL.dat and WWC_WF.dat; One option would be to
-# write a timestamp only every ? second and the other fields every second
-# with commata between them.
-#
-################################################################################
+"WWC_FP.dat"   contains  Flow Periods (= Cumulation of WF Records)
+ID start at   end at    Duration
+P3 13:45:00 - 13:45:07   7.0 sec
+P3 14:23:52 - 14:24:19  27.0 sec
+
+Reducing the size of WWC_ALL.dat and WWC_WF.dat; One option would be to
+write a timestamp only every ? second and the other fields every second
+with commata between them.
+
 
 """
 List of modules and functions
