@@ -1,8 +1,15 @@
 # USB Water Metering 
 Python-based codes that read audio from the WaWiCo USB adapter to determine whether water is flowing through a household pipe
 
+### JUMP TO:
+<a href="#start">Operating System Installs</a><br>
+<a href="#realtime">Real-Time Frequency Visualization</a><br>
+<a href="#detection">Water Flow Detection</a><br>
+<a href="#event">Event Detection and Documentation</a><br>
+
+<a id="start"></a>
 #
-### - Getting Started -
+### - Operating System Installs -
 The set of Python codes presented in this repository require 'pyaudio' as a library, which can be quite an involved install depending on the system (Mac, Linux, Windows). To install pyaudio, follow the procedures outlined below for your OS:
 
 ##### Raspberry Pi (Linux)
@@ -36,12 +43,12 @@ Once the .whl file is downloaded to the Downloads folder, navigate to that folde
     python3 -m pip install PyAudio-0.2.11-cp38-cp38-win_amd64.whl
 
 NOTE: the file above (PyAudio-0.2.11-cp38-cp38-win_amd64.whl) should be substituted for your Python version (cp38 = Python3.8) and OS version (win_amd64 = Windows 64-bit).
-
+<a id="realtime"></a>
 #
 ### - Real-Time Frequency Visualization -
 The following script runs a real-time visualization to help identify the frequency response of the MEMS microphone placed in proximity to the piping system:
 > realtime_freq.py
-
+<a id="flow"></a>
 #
 ### - Water Flow Detection -
 The following code is meant to identify water flow based on the frequencies produced during flow through the piping: 
@@ -127,3 +134,6 @@ Sat Jan 23 00:00:00 2021
 12:13:34 - 12:13:43     9 sec NYD
 .....
 """
+<a id="event"></a>
+#
+### - Event Detection and Documentation -
