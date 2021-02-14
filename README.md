@@ -43,7 +43,8 @@ Once the .whl file is downloaded to the Downloads folder, navigate to that folde
 
 NOTE: the file above (PyAudio-0.2.11-cp38-cp38-win_amd64.whl) should be substituted for your Python version (cp38 = Python3.8) and OS version (win_amd64 = Windows 64-bit).
 <a id="realtime"></a>
-#- Real-Time Frequency Visualization -
+
+# - Real-Time Frequency Visualization -
 The following script runs a real-time visualization to help identify the frequency response of the MEMS microphone placed in proximity to the piping system:
 > realtime_freq.py
 
