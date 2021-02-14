@@ -1,54 +1,20 @@
 ################################################################################
-# WFD2.py     Water Flow Detection;  Find/define the Frequency Bands in which
-# sound from Water-Flow has a maximum.  I also automatically eliminates noise that
-# may exist strongly in other Frequency ranges but only weakly in the Frequency
-# Bands of # Water-Flow.
-# by gramax, WaWiCo
-# December 27th 2020
-# Stand: Febr. 5th 2021
-#-------------------------------------------------------------------------------
-# Should work on any computer with a  Win 10, Mac OS 10.x or Linux OS
-# Python 3.x  and the libraroes pyaudio and numpy
-# For testing it also works with a  build in microphone.
-# For getting real data it needs the USB soundcard/Microphone combination
+# Water Flow Detection;  Find/define the Frequency Bands
 #
-# Creates file "WWC_ANA.dat" that look like this
-# Frq. Band 1: 1585 - 1605 Hz  Frq. Band 2: 1900 - 1920 Hz  (Sample Freq: 44100 Hz  Frequency Resolution: 3 Hz  --> Sample Size (Chunk): 14700)
-# ID          time   Frq Hz: 1584    1586    1590    1592    1596    1599    1602    1898    1902    1905    1908    1911    1914    1917     avg FB1/FB2    max FB1/F  max FB2/F smp/sec
-# P3 1612716190 08:43:10        0       0       7       1       1       3      10       0       1       0       2       3       0       0        3 /     0     10/1602      3/1911  1
-# P3 1612716191 08:43:11        3       1       1       3       5       5       1       0       0       0       0       1       1       0        2 /     0      5/1596      1/1911  3
-# P3 1612716192 08:43:12        1       1       0       7       6       2       1       1       0       1       3       1       0       0        2 /     0      7/1592      3/1908  3
-# This file can be used for further in depth analysis for Sensor/frequency/time pattern
+# -- by gramax, WaWiCo 2021
+#
 ################################################################################
-"""
-List of modules and functions
-# Diverse function
-	def check_time():           # Detect some points in Time, New Day, new hour etc
-	def ctrl_C(signal, frame):  # terminate program with CTRL_C key
-	def fR(str0,  CW):          # format data  to the right by colum size
-# File handling globals and function
-	def ana_log(txt):           # write all events to  WF_ANA.dat
-# Goertzel DFT/FFT  module
-    def goertzel(samples, sample_rate, *freqs):
-# Main
-"""
-################################################################################
-# Python 3 code
-# 1. Python internal modules
+# Python 3.x internal modules
 import os, sys, signal
 import time, datetime
 import math
-# 2. external libraries
-import pyaudio         # pyaudio_ver  = pyaudio.__version__;
-import numpy as np     # numpy_ver    = np.__version__;
-# 3. Own py modules
-# NONE at this date 27.12.20
-
+# external libraries
+import pyaudio
+import numpy as np
+#
 ################################################################################
 # Initialisation: Global var and arrays, Parameter settings, Files, etc.
 ################################################################################
-# Parameter settings  now set for my environment (house/pipe system)
-# a) Frequency
 RATE     =   44100;     # Fixed for my soundcard/Pc combo
 freq_R   =       3;     # The wanted frequency Resolution
 CHUNK    =  int(RATE/freq_R);   #  # --> resulting sample size for fR = 3 Hz
@@ -64,13 +30,6 @@ frg2_B   =  1920; #
 factor1    = 100000;     # 100.000 in my case (my house, Sensor and Amplification level)
 factor2    =   1;        # temporary set to 1 but  might need to be anywehre between 10 and 10.000
                          # Maybe we need a function as factor that does range and individual size specific reduction !!!
-
-# 2 x 20 Hz bandwidth  = 40 Hz with 2 Hz freq Resolution = 21 Bins * 22.050 samples = 463.050 steps
-#                              with 4 Hz freq Resolution = 11 Bins * 11.025 samples = 121.275 steps
-# 1. Sample Frequency also called Sample Rate is fixed to 44.100 in case of USB soundcards
-# 2. Sample Block Size also called Chunk is calculated by Sample Frequency / Frequency resolution
-# 3. Frequency bands to investigate: now limited to 2
-# 4. Frequency Resolution = Sample Frequency / Sample Block Size
 #------------------------------- END  parameter settings -------------------------------------
 
 ################################################################################
