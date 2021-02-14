@@ -93,6 +93,10 @@ eliminates all possible trouble with ALSA, Portaudio and pyaudio working togethe
 Beside printing to the screen the Module creates 3 files and then appends to
 these files each time the program is restarted.
 
+Below is an example output from the flow_detection.py script:
+
+![flow detection output](/images/wawico_flow_detection_output.png)
+
 
 1. WF_ALL_REC.dat
 Contains events Water-Flow or Not, easy to use for further statistics/graphics
