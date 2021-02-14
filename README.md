@@ -7,6 +7,12 @@ Python-based codes that read audio from the WaWiCo USB adapter to determine whet
 <a href="#flow">- Water Flow Detection</a><br>
 <a href="#event">- Event Detection and Documentation</a><br>
 
+The USB Water Metering library can be downloaded using git:
+
+    git clone https://github.com/wawico/usb-water-metering
+    
+Keep in mind — the libraries and installs to follow are still required for utilizing the library.
+
 <a id="start"></a>
 # - Operating System Installs -
 The set of Python codes presented in this repository require 'pyaudio' as a library, which can be quite an involved install depending on the system (Mac, Linux, Windows). To install pyaudio, follow the procedures outlined below for your OS:
