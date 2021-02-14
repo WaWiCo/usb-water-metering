@@ -48,6 +48,11 @@ NOTE: the file above (PyAudio-0.2.11-cp38-cp38-win_amd64.whl) should be substitu
 ### - Real-Time Frequency Visualization -
 The following script runs a real-time visualization to help identify the frequency response of the MEMS microphone placed in proximity to the piping system:
 > realtime_freq.py
+
+Example output plot from the real-time frequency analysis:
+
+![real-time freq plot](/images/realtime_freq_plot.png)
+
 <a id="flow"></a>
 #
 ### - Water Flow Detection -
