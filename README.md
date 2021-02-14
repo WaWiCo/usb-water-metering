@@ -8,8 +8,7 @@ Python-based codes that read audio from the WaWiCo USB adapter to determine whet
 <a href="#event">- Event Detection and Documentation</a><br>
 
 <a id="start"></a>
-#
-### - Operating System Installs -
+# - Operating System Installs -
 The set of Python codes presented in this repository require 'pyaudio' as a library, which can be quite an involved install depending on the system (Mac, Linux, Windows). To install pyaudio, follow the procedures outlined below for your OS:
 
 ##### Raspberry Pi (Linux)
@@ -44,8 +43,8 @@ Once the .whl file is downloaded to the Downloads folder, navigate to that folde
 
 NOTE: the file above (PyAudio-0.2.11-cp38-cp38-win_amd64.whl) should be substituted for your Python version (cp38 = Python3.8) and OS version (win_amd64 = Windows 64-bit).
 <a id="realtime"></a>
-#
-### - Real-Time Frequency Visualization -
+
+# - Real-Time Frequency Visualization -
 The following script runs a real-time visualization to help identify the frequency response of the MEMS microphone placed in proximity to the piping system:
 > realtime_freq.py
 
@@ -54,8 +53,8 @@ Example output plot from the real-time frequency analysis:
 ![real-time freq plot](/images/realtime_freq_plot.png)
 
 <a id="flow"></a>
-#
-### - Water Flow Detection -
+
+# - Water Flow Detection -
 The following code is meant to identify water flow based on the frequencies produced during flow through the piping: 
 > water_metering.py
 
@@ -140,8 +139,7 @@ Sat Jan 23 00:00:00 2021
 .....
 """
 <a id="event"></a>
-#
-### - Event Detection and Documentation -
+# - Event Detection and Documentation -
 
 Should work on any computer with a  Win 10, Mac OS 10.x or Linux OS
 Python 3.x  and the libraries pyaudio and numpy
@@ -208,5 +206,5 @@ File handling globals and function
 Goertzel DFT/FFT  module
     	- def goertzel(samples, sample_rate, *freqs):
 	
-Main Modul
+Main Module
 
