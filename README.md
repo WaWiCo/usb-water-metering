@@ -24,6 +24,7 @@ In the terminal, input the following:
     sudo pip3 install pyaudio
 
 ##### Ubuntu
+Again in the terminal, input the following:
 
     sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
     sudo pip3 install pyaudio
