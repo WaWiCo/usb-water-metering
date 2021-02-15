@@ -157,6 +157,8 @@ Below is an example output from the flow_detection.py script:
 
 <a id="event"></a>
 # - Event Detection and Documentation -
+The following code is meant to monitor water flow based on the frequencies determined above during flow periods and save them to a local file: 
+> event_detection.py
 
 Should work on any computer with a  Win 10, Mac OS 10.x or Linux OS
 Python 3.x  and the libraries pyaudio and numpy
