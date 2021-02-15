@@ -25,8 +25,8 @@ In the terminal, input the following:
 
 ##### Ubuntu
 
-$ sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
-$ sudo pip3 install pyaudio
+    sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+    sudo pip3 install pyaudio
     
 ##### Mac OS
 For Mac, XCode first needs to be downloaded from the App Store. Then, brew needs to be installed:
