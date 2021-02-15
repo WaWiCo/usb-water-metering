@@ -195,14 +195,14 @@ if __name__=="__main__":
             #
             t_vec,data,freq_vec,fft_data,\
                     freq_array,fft_array,t_spectrogram = data_analyzer() # analyze recording
+            fft_data/=np.sqrt(np.mean(np.power(data,2.0)))
             if plot_bool:
                 line1 = plot_updater() # update frequency plot
             else:
                 fig,ax,ax_bgnd,line1 = plotter() # first plot allocating params
                 plot_bool = 1 # lets the loop know the first plot started
         except:
-            fig.savefig("wawico_realtime_demo.png",dpi=300,
-                        bbox_inches='tight',facecolor='#FCFCFC')
+            break
             continue
         
     pyserial_end() # close the stream/pyaudio connection
