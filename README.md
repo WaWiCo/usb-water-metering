@@ -22,6 +22,11 @@ In the terminal, input the following:
 
     sudo apt-get install libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev
     sudo pip3 install pyaudio
+
+##### Ubuntu
+
+$ sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0
+$ sudo pip3 install pyaudio
     
 ##### Mac OS
 For Mac, XCode first needs to be downloaded from the App Store. Then, brew needs to be installed:
@@ -48,6 +53,7 @@ Once the .whl file is downloaded to the Downloads folder, navigate to that folde
     python3 -m pip install PyAudio-0.2.11-cp38-cp38-win_amd64.whl
 
 NOTE: the file above (PyAudio-0.2.11-cp38-cp38-win_amd64.whl) should be substituted for your Python version (cp38 = Python3.8) and OS version (win_amd64 = Windows 64-bit).
+
 <a id="realtime"></a>
 
 # - Real-Time Frequency Visualization -
