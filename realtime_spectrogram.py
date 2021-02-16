@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import numpy as np
-import time,wave,datetime,os,csv,sys
+import time,datetime,sys
 from scipy import signal
 
 ##############################################
@@ -225,6 +225,10 @@ if __name__=="__main__":
                     fig,ax,ax_bgnd,spec1 = spec_plotter() # first plot allocating params
                     plot_bool = 1 # lets the loop know the first plot started
         except:
+            fig.savefig('usb_wawico_spectrogram_makerportal.png',
+                        dpi=300,bbox_inches='tight',facecolor='#FCFCFC')
+            fig.savefig('usb_wawico_spectrogram.png',
+                        dpi=300,bbox_inches='tight',facecolor='#FFFFFF')
             break
 
     pyserial_end() # close the stream/pyaudio connection
