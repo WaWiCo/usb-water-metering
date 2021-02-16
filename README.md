@@ -67,6 +67,16 @@ Example output plot from the real-time frequency analysis:
 
 <a id="flow"></a>
 
+# - Spectrogram Visualization -
+A spectrogram is a time vs. frequency plot that allows users to see the frequency variability of the microphone response over time. The following script plots a real-time spectrogram:
+> realtime_spectrogram.py
+
+An example spectrogram is shown below for reference:
+
+![real-time spectrogram sample](/images/usb_wawico_spectrogram.png)
+
+Notice the large jump in values - this is the point where the faucet was turned on, resulting in the jump in frequency response in the 5kHz - 8kHz region.
+
 # - Water Flow Detection -
 The following code is meant to identify water flow based on the frequencies produced during flow through the piping: 
 > water_metering.py
