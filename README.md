@@ -75,7 +75,7 @@ An example spectrogram is shown below for reference:
 
 ![real-time spectrogram sample](/images/usb_wawico_spectrogram.png)
 
-Notice the large jump in values - this is the point where the faucet was turned on, resulting in the jump in frequency response in the 5kHz - 8kHz region.
+Notice the large jump in values - this is the point where the faucet was turned on, resulting in the jump in frequency response in the 3kHz - 7kHz region.
 
 # - Water Flow Detection -
 The following code is meant to identify water flow based on the frequencies produced during flow through the piping: 
