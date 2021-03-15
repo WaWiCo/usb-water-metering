@@ -69,6 +69,11 @@ Example output plot from the real-time frequency analysis:
 <a id="mech"></a>
 
 # - Comparison with Mechanical Flow Meter -
+If using a mechanical flow meter as a comparison, the following script can be used to test the meter with a Raspberry Pi:
+> mechanical_meter.py
+
+Next, users can test the mechanical meter against the WaWico USB Water Meter using the following script:
+>
 
 <a id="flow"></a>
 
