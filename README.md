@@ -77,7 +77,7 @@ Next, users can test the mechanical meter against the WaWico USB Water Meter usi
 
 An example output plot from the mechanical vs WaWiCo comparison is shown below:
 
-![Mech vs WaWiCo](/images/realtime_freq_plot.png)
+![Mech vs WaWiCo](/images/wawico_mechanical_correlation_white.png)
 
 <a id="flow"></a>
 
