@@ -93,7 +93,7 @@ Notice the large jump in values - this is the point where the faucet was turned 
 
 # - Water Flow Detection -
 The following code is meant to identify water flow based on the frequencies produced during flow through the piping: 
-> water_metering.py
+> flow_detection.py
 
 The signal amplitude coming from the microphone and the frequency bands are the
 2 variable to which the paramter need to be adapted.  Especially the amplitude
