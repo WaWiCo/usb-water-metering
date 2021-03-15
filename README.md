@@ -73,7 +73,11 @@ If using a mechanical flow meter as a comparison, the following script can be us
 > mechanical_meter.py
 
 Next, users can test the mechanical meter against the WaWico USB Water Meter using the following script:
->
+>mech_vs_wawico.py
+
+An example output plot from the mechanical vs WaWiCo comparison is shown below:
+
+![Mech vs WaWiCo](/images/realtime_freq_plot.png)
 
 <a id="flow"></a>
 
