@@ -322,7 +322,7 @@ if __name__=="__main__":
             print('Plotting Correlation...')
             pyserial_end() # close the stream/pyaudio connection
             fig = corr_plot()
-            fig.savefig('wawico_mechanical_correlation.png',dpi=300,bbox_inches='tight',
+            fig.savefig('./images/wawico_mechanical_correlation.png',dpi=300,bbox_inches='tight',
                         facecolor='#FCFCFC')
             fig.savefig('./images/wawico_mechanical_correlation_white.png',dpi=300,bbox_inches='tight',
                         facecolor='#FFFFFF')
