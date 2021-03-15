@@ -4,6 +4,7 @@ Python-based codes that read audio from the WaWiCo USB adapter to determine whet
 ### JUMP TO:
 <a href="#start">- Operating System Installs</a><br>
 <a href="#realtime">- Real-Time Frequency Visualization</a><br>
+<a href="#mech">- Comparison with Mechanical Flow Meter</a><br>
 <a href="#flow">- Water Flow Detection</a><br>
 <a href="#event">- Event Detection and Documentation</a><br>
 
@@ -64,6 +65,10 @@ The following script runs a real-time visualization to help identify the frequen
 Example output plot from the real-time frequency analysis:
 
 ![real-time freq plot](/images/realtime_freq_plot.png)
+
+<a id="mech"></a>
+
+# - Comparison with Mechanical Flow Meter -
 
 <a id="flow"></a>
 
