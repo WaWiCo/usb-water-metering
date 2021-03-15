@@ -7,7 +7,8 @@
 # 
 ##############################################
 #
-import time,sys,signal
+import time,sys
+import signal
 import RPi.GPIO as gpio
 #
 #####################################
@@ -27,7 +28,7 @@ if __name__== '__main__':
     # Experiment Parameter Setup
     #####################################
     #
-    t_elapsed = 0.1 # time [s] between each flow rate calculation
+    t_elapsed = 0.5 # time [s] between each flow rate calculation
 
     counter = 0 # for counting and calculating frequency
 
@@ -41,7 +42,7 @@ if __name__== '__main__':
     # GPIO setup for interrupt
     #####################################
     #
-    sensor_gpio = 17 # sensor GPIO pin
+    sensor_gpio = 23 # sensor GPIO pin
     gpio.setmode(gpio.BCM) # set for GPIO pin configuration
     gpio.setup(sensor_gpio,gpio.IN,pull_up_down=gpio.PUD_UP) # set interrupt
     #

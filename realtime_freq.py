@@ -111,7 +111,7 @@ def data_grabber():
         # grab data frames from buffer
         stream_data = stream.read(CHUNK,exception_on_overflow=False)
         data_frames.append(stream_data) # append data
-        data.append(np.frombuffer(stream_data,dtype=buffer_format))
+        data.append(np.frombuffer(stream_data,dtype=buffer_format)/((2**15)-1))
     return data,data_frames,t_0
 #
 ##############################################
