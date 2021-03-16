@@ -79,6 +79,10 @@ An example output plot from the mechanical vs WaWiCo comparison is shown below:
 
 ![Mech vs WaWiCo](/images/wawico_mechanical_correlation_white.png)
 
+An example output plot from the mechanical vs WaWiCo comparison with the Goertzel algorithm is shown below:
+
+![Goertzel vs Mechanical](/images/goertzel_comp_w_mechanical_white.png)
+
 <a id="flow"></a>
 
 # - Spectrogram Visualization -
