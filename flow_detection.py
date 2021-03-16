@@ -158,7 +158,7 @@ loop_ctr = 0;
 while True:
     loop_ctr += 1;
     # ======================== Frequency analysys Goertzel Version ========================
-    data     = np.frombuffer(stream.read(CHUNK, exception_on_overflow = False), dtype=np.int16);    # get chunks of data from soundstream
+    data     = np.frombuffer(stream.read(CHUNK, exception_on_overflow = False), dtype=np.int16)/((2.0**15)-1);    # get chunks of data from soundstream
     data     = data * np.hanning(len(data))                                                         # smoothit by  windowing data
     freqs, results = goertzel(data, RATE, (frg1_A, frg1_B), (frg2_A, frg2_B));                      # 2 ranges
     # ==============================fft part end ===============================
